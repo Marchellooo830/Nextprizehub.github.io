@@ -3,92 +3,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Quick Cash for Your Opinions</title>
+  <meta http-equiv="refresh" content="5;url=YOUR_SMARTLINK_URL_HERE" />
+  <title>Just a Moment...</title>
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f8f9fa;
-      text-align: center;
       padding: 0;
+      box-sizing: border-box;
     }
-    .container {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 20px;
-      background: white;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    .hero-img {
+
+    html, body {
       width: 100%;
-      max-width: 100%;
-      height: auto;
-    }
-    h1 {
-      font-size: 2em;
-      color: #222;
-      margin: 20px 0 10px;
-    }
-    p {
-      font-size: 1.1em;
-      color: #444;
-    }
-    .cta {
-      display: inline-block;
-      background: #d32f2f;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?fit=crop&w=1600&q=80') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
       color: white;
-      padding: 15px 30px;
-      font-size: 1.2em;
-      margin: 20px 0;
-      text-decoration: none;
-      border-radius: 8px;
-      transition: background 0.3s;
     }
-    .cta:hover {
-      background: #b71c1c;
+
+    .container {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 10px;
     }
-    .timer {
-      font-size: 1.2em;
-      font-weight: bold;
-      margin: 10px 0;
-      color: #e53935;
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
     }
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 1.5em;
-      }
-      .cta {
-        padding: 12px 24px;
-        font-size: 1em;
-      }
+
+    p {
+      font-size: 1.2rem;
+    }
+
+    .loader {
+      border: 8px solid rgba(255, 255, 255, 0.3);
+      border-top: 8px solid white;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+      margin: 20px auto;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <img src="image-survey.png" alt="Quick Cash" class="hero-img" />
-    <h1>Quick Cash for Your Opinions</h1>
-    <p>Give your opinions and get paid in cash. Time is limited!</p>
-    <div class="timer" id="countdown">Offer ends in 24:00:00</div>
-    <a class="cta" href="https://mobtrk.link/view.php?id=5539918&pub=3270769" target="_blank">GET STARTED</a>
+    <h1>Redirecting you...</h1>
+    <p>Please wait a moment while we verify your access.</p>
+    <div class="loader"></div>
   </div>
-
-  <script>
-    // 24-hour countdown timer
-    const countdown = document.getElementById('countdown');
-    let timeLeft = 24 * 60 * 60;
-
-    function updateTimer() {
-      const hours = String(Math.floor(timeLeft / 3600)).padStart(2, '0');
-      const minutes = String(Math.floor((timeLeft % 3600) / 60)).padStart(2, '0');
-      const seconds = String(timeLeft % 60).padStart(2, '0');
-      countdown.textContent = `Offer ends in ${hours}:${minutes}:${seconds}`;
-      if (timeLeft > 0) {
-        timeLeft--;
-        setTimeout(updateTimer, 1000);
-      }
-    }
-    updateTimer();
-  </script>
 </body>
 </html>
